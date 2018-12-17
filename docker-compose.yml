@@ -9,3 +9,10 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /opt/portainer/data:/data
+  
+  viz:
+    image: dockersamples/visualizer
+    volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+    - "8080:8080"
