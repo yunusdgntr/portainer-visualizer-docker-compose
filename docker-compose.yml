@@ -9,6 +9,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /opt/portainer/data:/data
+    ports:
+      - "9000:9000"  
   
   viz:
     image: dockersamples/visualizer
